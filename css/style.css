@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+:root{
+    --green:#27ae60;
+    --dark-color:#219150;
+    --black:#444;
+    --light-color:#666;
+    --border:.1rem solid rgba(0,0,0,.1);
+    --border-hover:.1rem solid var(--black);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width:1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--black);
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.active{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+a{
+    text-decoration: none;
+}
+
+.df{
+    display: flex;
+    align-items: center;
+}
+
+.header-1 {
+    background: #fff;
+    /* height: 15vh; */
+    padding: 2.5rem 0;
+}
+
+.header-1 .container{
+    justify-content: space-between;
+    height: 100%;
+}
+
+.logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+
+.logo i{
+    color: var(--green);
+    margin-right: 10px;
+}
+
+.search-form{
+    width: 50rem;
+    height: 5rem;
+    border: var(--border);
+    overflow: hidden;
+    background: #fff;
+    border-radius: .5rem;
+}
+
+.search-form input{
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 100%;
+    color: var(--black);
+    border: none;
+}
+
+.search-form label{
+    font-size: 2.5rem;
+    padding-right: 1.5rem;
+    color: var(--black);
+}
+
+.search-form label:hover{
+    color: var(--green);
+    cursor: pointer;
+}
+
+.header-1 .icons div,
+.header-1 .icons a
+{
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.header-1 .icons div:hover,
+.header-1 .icons a:hover{
+    color: var(--green);
+}
+
+#search-btn{
+    display: none;
+}
+
+.header-2{
+    width: 100%;
+    background-color: var(--green);
+}
+
+ nav{
+    justify-content: space-between;
+}
+
+nav a{
+    font-size: 1.7rem;
+    padding: 1.2rem;
+    color: #fff;
+}
+
+nav a:hover{
+    background-color: var(--dark-color);
+}
+
+
+@media screen and (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    .header-1{
+        padding: 2rem 0;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .header-1{
+        box-shadow: var(--box-shadow);
+        position: relative;
+    }
+    .header-1 .search-form{
+        position: absolute;
+        top: -115%;
+        width: 90%;
+        left: 2rem;
+        box-shadow: var(--box-shadow);
+    }
+    #search-btn{
+        display: inline-block;
+    }
+    .header-1 .search-form.active{
+        top: 115%;
+    }
+    .header-2{
+        display: none;
+    }
+}
+ 
