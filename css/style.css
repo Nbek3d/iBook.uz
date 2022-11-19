@@ -55,6 +55,12 @@ a{
     text-decoration: none;
 }
 
+.dfj{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .df{
     display: flex;
     align-items: center;
@@ -148,6 +154,26 @@ nav a:hover{
     background-color: var(--dark-color);
 }
 
+.bottom-navbar{
+    background: var(--green);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: none;
+}
+
+.bottom-navbar a{
+    font-size: 2.5rem;
+    padding: 1rem;
+    color: #fff;
+}
+
+.bottom-navbar a:hover{
+    background: var(--dark-color);
+}
+
 
 @media screen and (max-width: 991px){
     html{
@@ -159,6 +185,14 @@ nav a:hover{
 }
 
 @media screen and (max-width: 768px){
+    html{
+        scroll-padding-top: 0;
+    }
+
+    body{
+        padding-bottom: 6rem;
+    }
+
     .header-1{
         box-shadow: var(--box-shadow);
         position: relative;
@@ -179,5 +213,10 @@ nav a:hover{
     .header-2{
         display: none;
     }
+    .bottom-navbar{
+        display: block;
+    }
 }
+
+
  
