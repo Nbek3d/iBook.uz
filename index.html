@@ -49,11 +49,21 @@
         </div>
     </header>
 
-    <div class="login-form-container">
+    <div class="login-form-container df">
+        <div id="close-login-btn" class="fas fa-times"></div>
         <form action="">
             <h3>sign in</h3>
             <span>username</span>
-            <input type="text">
+            <input type="email" name="" placeholder="enter your email" id="" class="box">
+            <span>password</span>
+            <input type="password" name="" placeholder="enter your password" id="" class="box">
+            <div class="checkbox">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn">
+            <p>forget pasword? <a href="#">click here...</a></p>
+            <p>don't have an account <a href="#">click here...</a></p>
         </form>
     </div>
     <script src="js/app.js"></script>
